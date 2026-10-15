@@ -29,7 +29,9 @@ def fetch_nist(url: str, id: str) -> Optional[dict]:
             logger.debug("resolved from cache %s", url)
             return data
     except:
-        logger.debug("unable to find pre-fetched nist response, actually performing fetch.")
+        logger.debug(
+            "unable to find pre-fetched nist response, actually performing fetch."
+        )
     data = None
     nist_resp = None
     if (
